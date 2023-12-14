@@ -1,38 +1,88 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,body,#root {
+    width: 100%;
+    height: 100%;
+}
 .App {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
   text-align: center;
+  padding-top: 50px;
+  background: linear-gradient(to top, #87CEEB, #ADD8E6);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.WeatherContainer {
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  padding: 5px 0 5px 0px;
+  background-color: rgb(31, 163, 163);
+}
+.weather-list {
+ list-style-type: none;
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+ 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.weather-item-header {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.weather-item-maxcelsius {
+  color: black;
+  font-weight: bold;
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.weather-item-mincelsius {
+  color: rgba(255, 255, 255, 0.815);
+ 
+}
+
+.weather-item > div {
+
+ 
+  padding: 30px;
+
+}
+
+.weather-item-select {
+  border: 2px solid rgb(59, 217, 238);
+}
+
+.select-input {
+  width: 25%;
+  height: 4%;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.select-input:focus {
+  border: 2px solid rgb(59, 217, 238);
+}
+
+@media only screen and (max-width:1200px)  {
+
+  .weather-list {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .weather-item > div {
+
+    
+    padding: 20px 10px 20px 0;
+    
   }
+
+  
+  
 }
