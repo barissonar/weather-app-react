@@ -3,7 +3,7 @@ import { useWeather } from "../Context/WeatherContext";
 const api = {                                          // EndPointlerin ve keylerin api objectinde tanımlandığı kısım. 
      geokey: "35eb4471e9f465a1c42dc9b42f9cc931",
      geocodingAPI: "http://api.openweathermap.org/geo/1.0/direct",
-     weatherkey: "0bb65938ac5f4fb3893bd54015ad43c8",
+     weatherkey: "72b5e38c13e84a37a8b25f13aa995833",
      weatherAPI : "https://api.weatherbit.io/v2.0/forecast/daily",
      weatherIcon : "https://cdn.weatherbit.io/static/img/icons"
 }
@@ -39,7 +39,7 @@ function Weather() {
     }
    
     const weatherRequest = (response) => {    // Gelen coğrafi koordinatlara göre hava durumunu getiren fonksiyon.
-      fetch(`${api.weatherAPI}?lat=${response[0].lat}&lon=${response[0].lon}&lang=${country}&key=${api.weatherkey}`)
+      fetch(`${api.weatherAPI}?lat=${response[0].lat}&lon=${response[0].lon}&lang=${country}&days=7&key=${api.weatherkey}`)
       .then(res => res.json())
       .then(result => {
          console.log(result);
